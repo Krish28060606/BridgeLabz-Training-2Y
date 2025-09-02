@@ -1,0 +1,25 @@
+
+
+import java.util.Scanner;
+
+public class EmployeeBonus {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        double[] salary = new double[10];
+        double[] yearsOfService = new double[10];
+        double[] bonus = new double[10];
+        double[] newSalary = new double[10];
+        double totalBonus = 0;
+        double totalOldSalary = 0;
+        double totalNewSalary = 0;
+        for (int i = 0; i < 10; i++) {
+            System.out.print("Enter salary for employee " + (i + 1) + ": ");
+            salary[i] = input.nextDouble();
+            while (salary[i] <= 0) {
+                System.out.print("Invalid salary. Enter again: ");
+                salary[i] = input.nextDouble();
+            }
+            System.out.print("Enter years of service for employee " + (i + 1) + ": ");
+            yearsOfService[i] = input.nextDouble();
+            while (yearsOfService[i] < 0) {
+                System.out.print("Invalid years. Enter again: ");
